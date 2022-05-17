@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="convert.css">
+</head>
+<body>
+    <main>
+        <h1>Convert from Fahrenheit to Celsius</h1>
+        <script>
+            "use strict";
+            
+            // get Fahrenheit
+            const fahrenheit = parseFloat(prompt("Enter Fahrenheit temperature:"));
+
+            // Convert to Celsius
+            const celsius = parseFloat((fahrenheit-32)*(5/9));
+
+            // display conversion
+            const html = `<p>${fahrenheit.toFixed(1)} F = ${celsius.toFixed(1)} C</p>`;
+            document.write(html);
+        </script>
+    </main>
+</body>
+</html>

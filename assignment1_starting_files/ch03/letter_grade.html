@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <title>Grade Converter</title>
+</head>
+<body>
+    <main>
+        <h1>Show letter grade</h1>
+        <script>
+        "use strict";
+        let grade = 0;
+
+do{
+    // Get grade/grades
+    grade = parseFloat(prompt("Enter number grade from 0 through 100 \nOr Enter 999 to end entries"));
+
+    if(grade >= 0 && grade <= 100){
+    if (grade >= 88){
+        document.write(`<p>Grade ${grade} = A </p>`);
+  } else if (grade <= 87 && grade >= 80) {
+        document.write(`<p>Grade ${grade} = B </p>`);
+  } else if (grade <= 79 && grade >= 68) {
+        document.write(`<p>Grade ${grade} = C</p>`);
+  } else if (grade <= 67 && grade >= 60) {
+        document.write(`<p>Grade ${grade} = D</p>`);
+  } else{
+    document.write(`<p>Grade ${grade} = F</p>`);  
+  }
+}else if (grade !=999){
+    alert("Error: Enter grade between 1 & 100");
+}
+
+}while(grade != 999); 
+
+        </script>
+    </main>
+</body>
+</html>

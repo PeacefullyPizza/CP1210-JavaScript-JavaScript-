@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <title>Sum of Numbers</title>
+</head>
+<body>
+    <main>
+        <h1>Sum of Numbers</h1>
+        <script>
+        var again = "y";
+        var sum = 0;
+        var entry;
+    do{
+    
+        do {
+            var entry = prompt("Enter any top number to sum\n" + "from 1 through 100", 5); // get input
+    
+                if (isNaN(parseInt(entry)) || entry < 1 || entry > 100){
+    
+                     alert("Error, please enter a valid number from 1 to 100"); // display error
+    
+                } 
+    
+        }while (isNaN(parseInt(entry)) || entry < 1 || entry > 100); 
+        
+            for(i = 1; i <= entry; i++){
+        
+                sum += i;
+        
+            }
+    
+    document.write(`<p>\nThe sum of numbers from 1 through ${entry} is ${sum}</p>`); //display
+    again = prompt("Repeat entries?", "y"); // repeat 
+    }while(again == "y");
+        </script>
+    </main>
+</body>
+</html>

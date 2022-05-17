@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="convert.css">
+</head>
+<body>
+    <main>
+        <h1>Convert from Fahrenheit to Celsius</h1>
+        <script>
+            "use strict";
+            let again = "y"
+            do{
+            // get Fahrenheit
+            const fahrenheit = parseFloat(prompt("Enter Fahrenheit temperature:"));
+            if (fahrenheit < -100 || fahrenheit > 212) {
+                alert("You entered: " + fahrenheit +"\nEntry must range from -100 to 212.");
+            }
+     
+            // Convert to Celsius
+            const celsius = parseFloat((fahrenheit-32)*(5/9));
+
+            // display conversion
+            const html = `<p>${fahrenheit.toFixed(1)} F = ${celsius.toFixed(1)} C</p>`;
+            document.write(html);
+
+again=prompt("Repeat? (y/n)", "y");//prompt repeat 
+}while (again == "y");
+        </script>
+    </main>
+</body>
+</html>
